@@ -1,6 +1,6 @@
 {
   "name": "spa-proxy",
-  "version": "0.0.6",
+  "version": "1.0.6",
   "description": "HTTP Proxy For JEE-SPA",
   "main": "spa-proxy.js",
   "scripts": {
