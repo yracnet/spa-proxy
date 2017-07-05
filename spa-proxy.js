@@ -6,14 +6,21 @@ function SpaProxy(app, mod, path) {
 	project = app + '-' + mod + '-web';
 	var dir = ['part', 'view', 'ctrl', 'css', 'js'];
 	var pathSpa, pathStatic, pathShowcase;
-	this.withStatic = function (path, static, showcase) {
+
+	this.withStatic = function (path, static) {
 		if (path) {
 			static = static || 'static-web';
 			pathStatic = path + '/' + static + '/src/main/webapp';
+		} else {
+			pathStatic = undefined;
+		}
+	};
+
+	this.withShowcase = function (path, showcase) {
+		if (path) {
 			showcase = showcase || 'showcase-web';
 			pathShowcase = path + '/' + showcase + '/src/main/webapp';
 		} else {
-			pathStatic = undefined;
 			pathShowcase = undefined;
 		}
 	};
