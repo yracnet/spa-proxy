@@ -121,7 +121,7 @@ function SpaProxy(app, mod, path) {
 	};
 }
 
-module.exports = function (context, project) {
-	gutil.log('Create Config for: ' + context + '=' + project);
-	return new SpaProxy(context, project);
+module.exports = function (app, mod, path) {
+	gutil.log('Create Config for: ' + app + '-' + mod + ' = ' + path);
+	return new SpaProxy(app, mod, path);
 };
