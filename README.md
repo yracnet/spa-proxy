@@ -92,12 +92,13 @@ console.log(' No Proxy Dir: ', spa.noProxy.get()); //part, view, ctrl, css, js, 
 spa.noProxy.set(['css', 'asset']);
 console.log(' No Proxy Dir: ', spa.noProxy.get()); //css, asset
 ```
-⋅⋅⋅This structure is based by AngularJS and HTML Basic Concept
-⋅⋅+The 'ctrl' directory replace to 'controllers' of angularjs
-⋅⋅+The 'view' directory replace to 'views' of angularjs
-⋅⋅+The 'part' directory groups of common html
-⋅⋅+The 'css'  directory groups files 'css'
-⋅⋅+The 'js'   directory groups files 'js'
+
+This structure is based by AngularJS and HTML Basic Concept
+ * The 'ctrl' directory replace to 'controllers' of angularjs
+ * The 'view' directory replace to 'views' of angularjs
+ * The 'part' directory groups of common html
+ * The 'css'  directory groups files 'css'
+ * The 'js'   directory groups files 'js'
 
 Include Maven Project 
 ```
