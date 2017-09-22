@@ -17,6 +17,9 @@ function SpaProxy(project, context) {
 				},
 				set: function (dirs = []) {
 						noProxyDirs = dirs;
+				},
+				get: function () {
+						return noProxyDirs;
 				}
 		};
 
@@ -26,6 +29,9 @@ function SpaProxy(project, context) {
 				},
 				set: function (array = []) {
 						mavenProjectArray = array;
+				},
+				get: function () {
+						return mavenProjectArray;
 				}
 		};
 
