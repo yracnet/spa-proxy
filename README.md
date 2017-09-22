@@ -17,7 +17,7 @@ This module add proxy for SPA PROJECT based in MAVEN Directory
 
 ### 1. Add in devDependencies
 ```
-"spa-proxy": "^1.1.0"
+"spa-proxy": "^1.0.8"
 ```
 ### 2. Create a gulpfile.js 
 ```

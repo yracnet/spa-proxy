@@ -15,8 +15,8 @@ function SpaProxy(project, context) {
 				add: function (dir) {
 						noProxyDirs.push(dir);
 				},
-				set: function (dirs = []) {
-						noProxyDirs = dirs;
+				set: function (dirs) {
+						noProxyDirs = dirs || [];
 				},
 				get: function () {
 						return noProxyDirs;
@@ -27,8 +27,8 @@ function SpaProxy(project, context) {
 				add: function (project, context, path) {
 						mavenProjectArray.push({project: project, context: context, path: path});
 				},
-				set: function (array = []) {
-						mavenProjectArray = array;
+				set: function (array) {
+						mavenProjectArray = array || [];
 				},
 				get: function () {
 						return mavenProjectArray;
@@ -42,6 +42,7 @@ function SpaProxy(project, context) {
 								var key = '/' + maven.context + '/' + directory + '/';
 								key = util.assertURL(key);
 								var value = maven.path + '/' + maven.project + '/src/main/webapp/' + directory + '/';
+								value = util.assertURL(value);
 								routes[key] = value;
 						});
 				});
